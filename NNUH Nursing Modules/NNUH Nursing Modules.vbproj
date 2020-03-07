@@ -1,0 +1,1022 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Net.Compilers.3.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.3.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{D975A2A3-1D25-45E4-AC92-9C971C0EFB8D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>NNUH_Nursing_Modules</RootNamespace>
+    <AssemblyName>NNUH Nursing Modules</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>NNUH Nursing Modules.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <FilesToIncludeForPublish>AllFilesInProjectFolder</FilesToIncludeForPublish>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>NNUH Nursing Modules.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=18.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.18.1.1\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxRichEdit.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxThemes.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.Bootstrap.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.Resources.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="ImageResizer, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ImageResizer.4.2.5\lib\net45\ImageResizer.dll</HintPath>
+    </Reference>
+    <Reference Include="Imazen.Crop">
+      <HintPath>C:\Users\Ala' Dawood\Desktop\lilith-cropimage-3bfc803\Binaries\Debug\Imazen.Crop.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>C:\Users\akm19\Downloads\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itextsharp.xmlworker.5.5.13\lib\itextsharp.xmlworker.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.4.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.9.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.9.1\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.9.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.9.1\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.9.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.9.1\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.9.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.9.1\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.9.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.9.1\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.9.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.9.1\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.TelemetryCorrelation, Version=1.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.5\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.AppService.ApiApps.Service, Version=0.9.64.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.AppService.ApiApps.Service.0.9.64\lib\net45\Microsoft.Azure.AppService.ApiApps.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=5.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.JsonWebTokens.5.4.0\lib\net45\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=5.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.5.4.0\lib\net45\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.5.4.0\lib\net45\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Swashbuckle.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cd1bb07a5ac7c7bc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Swashbuckle.Core.5.6.0\lib\net40\Swashbuckle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.3.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.5.1\lib\net45\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.5.4.0\lib\net45\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="ArtImg\" />
+    <Folder Include="Connection\" />
+    <Folder Include="CoursePage\" />
+    <Folder Include="ProfileImg\" />
+    <Folder Include="VidCourses\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Start\SwaggerConfig.cs" />
+    <Content Include="CatImg\636721461412011576.jpg" />
+    <Content Include="CatImg\636721461517189457.jpg" />
+    <Content Include="CatImg\636721461646666062.jpg" />
+    <Content Include="CatImg\636723582838956236.jpg" />
+    <Content Include="Cleaning\beside.html" />
+    <Content Include="Cleaning\css\album.css" />
+    <Content Include="Cleaning\css\bootstrap-grid.css" />
+    <Content Include="Cleaning\css\bootstrap-grid.min.css" />
+    <Content Include="Cleaning\css\bootstrap-reboot.css" />
+    <Content Include="Cleaning\css\bootstrap-reboot.min.css" />
+    <Content Include="Cleaning\css\bootstrap.css" />
+    <Content Include="Cleaning\css\bootstrap.min.css" />
+    <Content Include="Cleaning\css\fontawesome.min.css" />
+    <Content Include="Cleaning\css\main.css" />
+    <Content Include="Cleaning\ecg.html" />
+    <Content Include="Cleaning\feeding.html" />
+    <Content Include="Cleaning\image\6f4cbced0c0948a1b9cca77c01510911.png" />
+    <Content Include="Cleaning\image\ABGs machine.png" />
+    <Content Include="Cleaning\image\Bedside monitor1.jpg" />
+    <Content Include="Cleaning\image\cardiac monitor.png" />
+    <Content Include="Cleaning\image\cardiart-9108-12-channel-ecg-machine-500x500.png" />
+    <Content Include="Cleaning\image\Defibrillator Machine.jpg" />
+    <Content Include="Cleaning\image\Defibrillator Machine1.jpg" />
+    <Content Include="Cleaning\image\Dropper.jpg" />
+    <Content Include="Cleaning\image\ECG machine.jpg" />
+    <Content Include="Cleaning\image\ECG machine1.jpg" />
+    <Content Include="Cleaning\image\Feeding pump.jpg" />
+    <Content Include="Cleaning\image\Feeding pump1.jpg" />
+    <Content Include="Cleaning\image\feeding pump2.jpg" />
+    <Content Include="Cleaning\image\gluco-check_glucose_meter.png" />
+    <Content Include="Cleaning\image\Glucocheck.jpg" />
+    <Content Include="Cleaning\image\kangaroo-joey-sets-enteral-feeding-bags-459.jpg" />
+    <Content Include="Cleaning\image\logo.ico" />
+    <Content Include="Cleaning\image\logo.png" />
+    <Content Include="Cleaning\image\monitor-bedside.jpg" />
+    <Content Include="Cleaning\image\nihohkohden-cardiolife_tec_5600-life-l.jpg" />
+    <Content Include="Cleaning\image\nihonkohden-life_scope_vs-front-l.jpg" />
+    <Content Include="Cleaning\image\nihonkohden-life_scope_vs-life-l.jpg" />
+    <Content Include="Cleaning\image\Portable monitor1.jpg" />
+    <Content Include="Cleaning\image\rj1l1700000005tn_new.jpg" />
+    <Content Include="Cleaning\image\Syringe pump.png" />
+    <Content Include="Cleaning\image\ventilator.png" />
+    <Content Include="Cleaning\image\ventilator1.jpg" />
+    <Content Include="Cleaning\index.html" />
+    <Content Include="Cleaning\js\bootstrap.bundle.js" />
+    <Content Include="Cleaning\js\bootstrap.bundle.min.js" />
+    <Content Include="Cleaning\js\bootstrap.js" />
+    <Content Include="Cleaning\js\bootstrap.min.js" />
+    <Content Include="Cleaning\js\fontawesome.min.js" />
+    <Content Include="Cleaning\js\html5shiv.min.js" />
+    <Content Include="Cleaning\js\jquery-3.3.1.min.js" />
+    <Content Include="Cleaning\js\main.js" />
+    <Content Include="Cleaning\js\popper.min.js" />
+    <Content Include="Cleaning\js\respond.min.js" />
+    <Content Include="Cleaning\Portable-Monitor.html" />
+    <Content Include="Cleaning\subpage\bedside-cable.html" />
+    <Content Include="Cleaning\subpage\bedside-screen.html" />
+    <Content Include="Cleaning\subpage\bedside-thermal.html" />
+    <Content Include="Cleaning\subpage\dropper.html" />
+    <Content Include="Cleaning\subpage\ecg.html" />
+    <Content Include="Cleaning\subpage\feeding-pump-bag.html" />
+    <Content Include="Cleaning\subpage\feeding-pump.html" />
+    <Content Include="Cleaning\subpage\Portable-Monitor.html" />
+    <Content Include="Cleaning\subpage\syringe.html" />
+    <Content Include="Cleaning\subpage\ventilator-circuit, filters, ambu bag, mouthpiece.html" />
+    <Content Include="Cleaning\subpage\ventilator-Exterior.html" />
+    <Content Include="Cleaning\subpage\ventilator-screen.html" />
+    <Content Include="Cleaning\subpage\ventilator-van.html" />
+    <Content Include="Cleaning\syringe.html" />
+    <Content Include="Cleaning\ventilator.html" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="Content\Style2.css" />
+    <Content Include="Global.asax" />
+    <Content Include="images\Certi.png" />
+    <Content Include="images\clean.jpg" />
+    <Content Include="images\explore.jpg" />
+    <Content Include="images\heart2.jpg" />
+    <Content Include="images\IMAGINE.jpg" />
+    <Content Include="images\know.jpg" />
+    <Content Include="images\learn-courses.png" />
+    <Content Include="images\learn.jpg" />
+    <Content Include="images\Login.png" />
+    <Content Include="images\Logo1_Pro.png" />
+    <Content Include="images\Logo2_Pro.png" />
+    <Content Include="images\Logo_Pro.png" />
+    <Content Include="images\nnuh.jpg" />
+    <Content Include="images\pills_400.png" />
+    <Content Include="images\think.jpg" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\Logo0.png" />
+    <Content Include="images\logo1.png" />
+    <Content Include="images\Logo10.png" />
+    <Content Include="images\Logo2.png" />
+    <Content Include="MedImg\636721463717754394.jpg" />
+    <Content Include="MedImg\636721468403367440.jpg" />
+    <Content Include="MedImg\636721468724466328.jpg" />
+    <Content Include="MedImg\636721469036778305.jpg" />
+    <Content Include="MedImg\636721469308195793.jpg" />
+    <Content Include="MedImg\636723583282171083.jpg" />
+    <Content Include="AddCourseSlidesUC.ascx" />
+    <Content Include="AddQustionUC.ascx" />
+    <Content Include="CertificateUC.ascx" />
+    <Content Include="ChangePassUC.ascx" />
+    <Content Include="CourseManagmentUC.ascx" />
+    <Content Include="CoursesUC.ascx" />
+    <Content Include="CourseViewUC.ascx" />
+    <Content Include="EditCatUC.ascx" />
+    <Content Include="EditMedUC.ascx" />
+    <Content Include="FirstUC.ascx" />
+    <Content Include="LoginUC.ascx" />
+    <Content Include="ManageProUC.ascx" />
+    <Content Include="MarkUC.ascx" />
+    <Content Include="MedicationManagmentUC.ascx" />
+    <Content Include="MedicationViewUC.ascx" />
+    <Content Include="Quastion1UC.ascx" />
+    <Content Include="RegisteredUC.ascx" />
+    <Content Include="scripts\bootstrap.bundle.js" />
+    <Content Include="scripts\bootstrap.bundle.min.js" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="scripts\bootstrap.min.js.map" />
+    <Content Include="scripts\bootstrap.js.map" />
+    <Content Include="scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="scripts\esm\popper-utils.js" />
+    <Content Include="scripts\esm\popper-utils.min.js" />
+    <Content Include="scripts\esm\popper.js" />
+    <Content Include="scripts\esm\popper.min.js" />
+    <Content Include="scripts\esm\popper.min.js.map" />
+    <Content Include="scripts\esm\popper.js.map" />
+    <Content Include="scripts\esm\popper-utils.min.js.map" />
+    <Content Include="scripts\esm\popper-utils.js.map" />
+    <Content Include="App_Code\GlyphIcon.cshtml" />
+    <None Include="scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="scripts\jquery-3.4.1.js" />
+    <Content Include="scripts\jquery-3.4.1.min.js" />
+    <Content Include="scripts\jquery-3.4.1.slim.js" />
+    <Content Include="scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="scripts\popper-utils.js" />
+    <Content Include="scripts\popper-utils.min.js" />
+    <Content Include="scripts\popper.js" />
+    <Content Include="scripts\popper.min.js" />
+    <Content Include="scripts\umd\popper-utils.js" />
+    <Content Include="scripts\umd\popper-utils.min.js" />
+    <Content Include="scripts\umd\popper.js" />
+    <Content Include="scripts\umd\popper.min.js" />
+    <Content Include="SlideCourseViewUC.ascx" />
+    <Content Include="UserDetailsUC.ascx" />
+    <Content Include="UserManagmentUC.ascx" />
+    <Content Include="ValidationUC.ascx" />
+    <Content Include="VidCourseViewUC.ascx" />
+    <Content Include="ViewMedUC.ascx" />
+    <Content Include="READ_ME.txt" />
+    <Content Include="scripts\ai.0.22.9-build00167.js" />
+    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="AddCourseSlidesWF.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AddQustionWF.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CertificateWF.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ChangePassWF.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CoursesManagmentWF.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CourseViewWF.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EditCatWF.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EditMedWF.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Index.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LoginWF.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ManageProWF.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MarkWF.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MedicationManagmentWF.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MedicationViewWF.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="QuastionWF.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RegisterWF.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SlideCourseViewWF.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Default.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UserDetailWF.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UserManagmentWF.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ValidationWF.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="VidCourseViewWF.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ViewMedWF.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SliImg\636681290910223435.jpg" />
+    <Content Include="SliImg\636681291011871188.jpg" />
+    <Content Include="SliSubImg\6367059248771631190.jpg" />
+    <Content Include="SliSubImg\6367059248772029391.jpg" />
+    <Content Include="SliSubImg\6367059248772829122.jpg" />
+    <Content Include="SliSubImg\6367059248773229023.jpg" />
+    <Content Include="SliSubImg\6367059248774028874.jpg" />
+    <Content Include="VidImg\636680623476155507.jpg" />
+    <Content Include="VidImg\636680624105936312.jpg" />
+    <Content Include="VidImg\636681681695619426.jpg" />
+    <Content Include="VidImg\636681682223683700.jpg" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="NursingModules.Master.designer.vb">
+      <DependentUpon>NursingModules.Master</DependentUpon>
+    </Compile>
+    <Compile Include="NursingModules.Master.vb">
+      <DependentUpon>NursingModules.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddCourseSlidesUC.ascx.designer.vb">
+      <DependentUpon>AddCourseSlidesUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AddCourseSlidesUC.ascx.vb">
+      <DependentUpon>AddCourseSlidesUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddQustionUC.ascx.designer.vb">
+      <DependentUpon>AddQustionUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AddQustionUC.ascx.vb">
+      <DependentUpon>AddQustionUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CertificateUC.ascx.designer.vb">
+      <DependentUpon>CertificateUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CertificateUC.ascx.vb">
+      <DependentUpon>CertificateUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassUC.ascx.designer.vb">
+      <DependentUpon>ChangePassUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassUC.ascx.vb">
+      <DependentUpon>ChangePassUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CourseManagmentUC.ascx.designer.vb">
+      <DependentUpon>CourseManagmentUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CourseManagmentUC.ascx.vb">
+      <DependentUpon>CourseManagmentUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CoursesUC.ascx.designer.vb">
+      <DependentUpon>CoursesUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CoursesUC.ascx.vb">
+      <DependentUpon>CoursesUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CourseViewUC.ascx.designer.vb">
+      <DependentUpon>CourseViewUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CourseViewUC.ascx.vb">
+      <DependentUpon>CourseViewUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditCatUC.ascx.designer.vb">
+      <DependentUpon>EditCatUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EditCatUC.ascx.vb">
+      <DependentUpon>EditCatUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditMedUC.ascx.designer.vb">
+      <DependentUpon>EditMedUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EditMedUC.ascx.vb">
+      <DependentUpon>EditMedUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FirstUC.ascx.designer.vb">
+      <DependentUpon>FirstUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FirstUC.ascx.vb">
+      <DependentUpon>FirstUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginUC.ascx.designer.vb">
+      <DependentUpon>LoginUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginUC.ascx.vb">
+      <DependentUpon>LoginUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageProUC.ascx.designer.vb">
+      <DependentUpon>ManageProUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageProUC.ascx.vb">
+      <DependentUpon>ManageProUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MarkUC.ascx.designer.vb">
+      <DependentUpon>MarkUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MarkUC.ascx.vb">
+      <DependentUpon>MarkUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MedicationManagmentUC.ascx.designer.vb">
+      <DependentUpon>MedicationManagmentUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MedicationManagmentUC.ascx.vb">
+      <DependentUpon>MedicationManagmentUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MedicationViewUC.ascx.designer.vb">
+      <DependentUpon>MedicationViewUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MedicationViewUC.ascx.vb">
+      <DependentUpon>MedicationViewUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quastion1UC.ascx.designer.vb">
+      <DependentUpon>Quastion1UC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Quastion1UC.ascx.vb">
+      <DependentUpon>Quastion1UC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegisteredUC.ascx.designer.vb">
+      <DependentUpon>RegisteredUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="RegisteredUC.ascx.vb">
+      <DependentUpon>RegisteredUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SlideCourseViewUC.ascx.designer.vb">
+      <DependentUpon>SlideCourseViewUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SlideCourseViewUC.ascx.vb">
+      <DependentUpon>SlideCourseViewUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserDetailsUC.ascx.designer.vb">
+      <DependentUpon>UserDetailsUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserDetailsUC.ascx.vb">
+      <DependentUpon>UserDetailsUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagmentUC.ascx.designer.vb">
+      <DependentUpon>UserManagmentUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagmentUC.ascx.vb">
+      <DependentUpon>UserManagmentUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValidationUC.ascx.designer.vb">
+      <DependentUpon>ValidationUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ValidationUC.ascx.vb">
+      <DependentUpon>ValidationUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VidCourseViewUC.ascx.designer.vb">
+      <DependentUpon>VidCourseViewUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="VidCourseViewUC.ascx.vb">
+      <DependentUpon>VidCourseViewUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewMedUC.ascx.designer.vb">
+      <DependentUpon>ViewMedUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMedUC.ascx.vb">
+      <DependentUpon>ViewMedUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddCourseSlidesWF.aspx.designer.vb">
+      <DependentUpon>AddCourseSlidesWF.aspx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="AddCourseSlidesWF.aspx.vb">
+      <DependentUpon>AddCourseSlidesWF.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="AddQustionWF.aspx.designer.vb">
+      <DependentUpon>AddQustionWF.aspx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="AddQustionWF.aspx.vb">
+      <DependentUpon>AddQustionWF.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CertificateWF.aspx.designer.vb">
+      <DependentUpon>CertificateWF.aspx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CertificateWF.aspx.vb">
+      <DependentUpon>CertificateWF.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="ChangePassWF.aspx.designer.vb">
+      <DependentUpon>ChangePassWF.aspx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="ChangePassWF.aspx.vb">
+      <DependentUpon>ChangePassWF.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CoursesManagmentWF.aspx.designer.vb">
+      <DependentUpon>CoursesManagmentWF.aspx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CoursesManagmentWF.aspx.vb">
+      <DependentUpon>CoursesManagmentWF.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CourseViewWF.aspx.designer.vb">
+      <DependentUpon>CourseViewWF.aspx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CourseViewWF.aspx.vb">
+      <DependentUpon>CourseViewWF.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="EditCatWF.aspx.designer.vb">
+      <DependentUpon>EditCatWF.aspx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="EditCatWF.aspx.vb">
+      <DependentUpon>EditCatWF.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="EditMedWF.aspx.designer.vb">
+      <DependentUpon>EditMedWF.aspx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="EditMedWF.aspx.vb">
+      <DependentUpon>EditMedWF.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Index.aspx.designer.vb">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Index.aspx.vb">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="LoginWF.aspx.designer.vb">
+      <DependentUpon>LoginWF.aspx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="LoginWF.aspx.vb">
+      <DependentUpon>LoginWF.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="ManageProWF.aspx.designer.vb">
+      <DependentUpon>ManageProWF.aspx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="ManageProWF.aspx.vb">
+      <DependentUpon>ManageProWF.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="MarkWF.aspx.designer.vb">
+      <DependentUpon>MarkWF.aspx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="MarkWF.aspx.vb">
+      <DependentUpon>MarkWF.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="MedicationManagmentWF.aspx.designer.vb">
+      <DependentUpon>MedicationManagmentWF.aspx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="MedicationManagmentWF.aspx.vb">
+      <DependentUpon>MedicationManagmentWF.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="MedicationViewWF.aspx.designer.vb">
+      <DependentUpon>MedicationViewWF.aspx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="MedicationViewWF.aspx.vb">
+      <DependentUpon>MedicationViewWF.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="QuastionWF.aspx.designer.vb">
+      <DependentUpon>QuastionWF.aspx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="QuastionWF.aspx.vb">
+      <DependentUpon>QuastionWF.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="RegisterWF.aspx.designer.vb">
+      <DependentUpon>RegisterWF.aspx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="RegisterWF.aspx.vb">
+      <DependentUpon>RegisterWF.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="SlideCourseViewWF.aspx.designer.vb">
+      <DependentUpon>SlideCourseViewWF.aspx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="SlideCourseViewWF.aspx.vb">
+      <DependentUpon>SlideCourseViewWF.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="UserDetailWF.aspx.designer.vb">
+      <DependentUpon>UserDetailWF.aspx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="UserDetailWF.aspx.vb">
+      <DependentUpon>UserDetailWF.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="UserManagmentWF.aspx.designer.vb">
+      <DependentUpon>UserManagmentWF.aspx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="UserManagmentWF.aspx.vb">
+      <DependentUpon>UserManagmentWF.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="ValidationWF.aspx.designer.vb">
+      <DependentUpon>ValidationWF.aspx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="ValidationWF.aspx.vb">
+      <DependentUpon>ValidationWF.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="VidCourseViewWF.aspx.designer.vb">
+      <DependentUpon>VidCourseViewWF.aspx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="VidCourseViewWF.aspx.vb">
+      <DependentUpon>VidCourseViewWF.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="ViewMedWF.aspx.designer.vb">
+      <DependentUpon>ViewMedWF.aspx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="ViewMedWF.aspx.vb">
+      <DependentUpon>ViewMedWF.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app.config" />
+    <Content Include="App_Themes\Items\items.skin" />
+    <Content Include="Metadata\deploymentTemplates\apiappconfig.azureresource.json" />
+    <Content Include="apiapp.json" />
+    <Content Include="libman.json" />
+    <Content Include="Cleaning\css\bootstrap-grid.css.map" />
+    <Content Include="Cleaning\css\bootstrap-grid.min.css.map" />
+    <Content Include="Cleaning\css\bootstrap-reboot.css.map" />
+    <Content Include="Cleaning\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Cleaning\css\bootstrap.css.map" />
+    <Content Include="Cleaning\css\bootstrap.min.css.map" />
+    <Content Include="Cleaning\js\bootstrap.bundle.js.map" />
+    <Content Include="Cleaning\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Cleaning\js\bootstrap.js.map" />
+    <Content Include="Cleaning\js\bootstrap.min.js.map" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\Nursing Module.pubxml" />
+    <None Include="My Project\PublishProfiles\Nursing Modules.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="packages.config" />
+    <Content Include="NursingModules.Master" />
+    <Content Include="scripts\umd\popper.min.js.map" />
+    <Content Include="scripts\umd\popper.js.map" />
+    <Content Include="scripts\umd\popper-utils.min.js.map" />
+    <Content Include="scripts\umd\popper-utils.js.map" />
+    <Content Include="scripts\README.md" />
+    <Content Include="scripts\popper.min.js.map" />
+    <Content Include="scripts\popper.js.map" />
+    <Content Include="scripts\popper-utils.min.js.map" />
+    <Content Include="scripts\popper-utils.js.map" />
+    <Content Include="scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="scripts\jquery-3.4.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="scripts\index.d.ts" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2345</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2346/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+          <servers defaultServer="">
+            <server name="SelfHostServer" exePath="" cmdArgs="" url="http://localhost:2345/" workingDir="" />
+          </servers>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.3.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.3.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.9.1\build\Microsoft.ApplicationInsights.DependencyCollector.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.9.1\build\Microsoft.ApplicationInsights.DependencyCollector.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.9.1\build\Microsoft.ApplicationInsights.PerfCounterCollector.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.9.1\build\Microsoft.ApplicationInsights.PerfCounterCollector.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.9.1\build\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.9.1\build\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ApplicationInsights.WindowsServer.2.9.1\build\Microsoft.ApplicationInsights.WindowsServer.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ApplicationInsights.WindowsServer.2.9.1\build\Microsoft.ApplicationInsights.WindowsServer.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ApplicationInsights.Web.2.9.1\build\Microsoft.ApplicationInsights.Web.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ApplicationInsights.Web.2.9.1\build\Microsoft.ApplicationInsights.Web.targets'))" />
+  </Target>
+  <Import Project="..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.9.1\build\Microsoft.ApplicationInsights.DependencyCollector.targets" Condition="Exists('..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.9.1\build\Microsoft.ApplicationInsights.DependencyCollector.targets')" />
+  <Import Project="..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.9.1\build\Microsoft.ApplicationInsights.PerfCounterCollector.targets" Condition="Exists('..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.9.1\build\Microsoft.ApplicationInsights.PerfCounterCollector.targets')" />
+  <Import Project="..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.9.1\build\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.targets" Condition="Exists('..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.9.1\build\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.targets')" />
+  <Import Project="..\packages\Microsoft.ApplicationInsights.WindowsServer.2.9.1\build\Microsoft.ApplicationInsights.WindowsServer.targets" Condition="Exists('..\packages\Microsoft.ApplicationInsights.WindowsServer.2.9.1\build\Microsoft.ApplicationInsights.WindowsServer.targets')" />
+  <Import Project="..\packages\Microsoft.ApplicationInsights.Web.2.9.1\build\Microsoft.ApplicationInsights.Web.targets" Condition="Exists('..\packages\Microsoft.ApplicationInsights.Web.2.9.1\build\Microsoft.ApplicationInsights.Web.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
